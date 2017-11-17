@@ -1,0 +1,141 @@
+@import "mq";
+@import "fonts";
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+.sp-commute-svg {
+
+	visibility: hidden;
+	height: 400px;
+	width: 300px;
+
+	position: fixed;
+	right: 312px;
+	top: 388px;
+
+	border: 1px solid #eaeaea;
+	//overflow: visible !important;
+}
+
+.sp-building {
+
+	//fill: none;
+	fill: #b82266;
+	//fill: #333;
+	//stroke: #005689;
+	fill-opacity: 0.75;
+	stroke-width: 1;
+}
+
+.sp-fav {
+
+	//fill: #bdbdbd;
+
+	fill: #ffce4b;
+	//stroke: #ff9b0b;
+	fill-opacity: 0.5;
+	stroke-width: 1;
+}
+
+.sp-outline {
+	stroke: #333;
+	stroke-width: 1;
+	fill: none;
+}
+
+.sp-line {
+	stroke: #fb0;
+	stroke-width: 2px;
+	fill: none;
+}
+
+.sp-person {
+	fill: #b51800;
+}
+
+.sp-station {
+	fill: #fb0;
+}
+
+.sp-label--large {
+	@include fs-header(2);
+	text-anchor: middle;
+}
+
+.sp-label--small {
+	@include fs-textSans(3);
+	text-anchor: middle;
+}
+
+.sp-station--sec {
+	stroke: #fb0;
+	fill: none;
+	stroke-width: 2;
+}
+
+.sp-map {
+
+	display: block;
+	height: 600px;
+	width: 100%;
+	max-width: 620px;
+}
+
+.sp-map__title {
+	@include fs-header(2);
+}
+
+.sp-distrito {
+	stroke: white;
+	stroke-width: .5;
+}
+
+.sp-key__word {
+	@include fs-textSans(2);
+
+	&.sp-key__word--right {
+		text-anchor: end;
+	}
+}
+
+.content__main-column--interactive {
+    & > p, & > h2, .element-interactive,.element-atom { 
+        max-width: 620px;
+
+        @include mq(leftCol) {
+            margin-left: 160px !important;
+        }
+        @include mq(wide) {
+            margin-left: 240px !important;
+        }
+    }
+
+    & > h2 {
+    	font-family: "Guardian Egyptian Web", Georgia;
+    	font-size: 36px;
+    	line-height: 42px;
+    	font-weight: 200;
+    	color: #333;
+    	margin-top: 36px;
+    	margin-bottom: 6px;
+    }
+
+    .element--immersive {
+    	max-width: initial;
+    	margin-left: 0 !important;
+        margin-bottom: 36px !important;
+    } 
+
+    .element--showcase {
+        
+    }
+}
