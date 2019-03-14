@@ -12,9 +12,29 @@
     margin: 0 !important;
 }
 
+.globe-country {
+	fill: #f6f6f6;
+	//stroke: #dcdcdc;
+}
+
+.globe-mesh {
+	stroke: #bdbdbd;
+	fill: none;
+}
+
+.globe-ocean {
+	fill: white;
+	stroke: #eaeaea;
+}
+
+.globe-bounds {
+	stroke: #bdbdbd;
+	fill: none;
+}
+
 .sp-commute-svg {
 
-	visibility: hidden;
+	//visibility: hidden;
 	height: 400px;
 	width: 300px;
 

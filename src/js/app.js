@@ -365,7 +365,7 @@ const meta = [
 	},
 		{
 		'name' : 'Average income',
-		'domain' : [0, 5000],
+		'domain' : [2000, 4000],
 		'words' : ['lower', 'higher']
 	},
 		{
@@ -379,7 +379,7 @@ const meta = [
 		'words' : ['lower', 'higher']
 	},
 		{
-		'name' : 'Youth poverty',
+		'name' : 'Teenage pregnancy rate',
 		'domain' : [5, 20],
 		'words' : ['lower', 'higher']
 	},
@@ -412,21 +412,22 @@ const highRises = JSON.parse(buildingsStr.replace(/'/g, '"'))
 
 d3.range(1, 12).forEach(n => {
 
-	if([7,9, 10, 11].includes(n)) { drawMap(n, meta[n-1], highRises) }
+	if(true) { drawMap(n, meta[n-1], highRises) }
+	//if([7,9, 10, 11].includes(n)) { drawMap(n, meta[n-1], highRises) }
 
 })
 
-var items = $('.sp-container').childNodes;
-var itemsArr = [];
-for (var i in items) {
-    if (items[i].nodeType == 1) { // get rid of the whitespace text nodes
-        itemsArr.push(items[i]);
-    }
-}
+// var items = $('.sp-container').childNodes;
+// var itemsArr = [];
+// for (var i in items) {
+//     if (items[i].nodeType == 1) { // get rid of the whitespace text nodes
+//         itemsArr.push(items[i]);
+//     }
+// }
 
-console.log(itemsArr)
+// console.log(itemsArr)
 
-$('.sp-container').appendChild(itemsArr[1]);
-$('.sp-container').appendChild(itemsArr[2]);
-$('.sp-container').appendChild(itemsArr[3]);
-$('.sp-container').appendChild(itemsArr[0]);
+// $('.sp-container').appendChild(itemsArr[1]);
+// $('.sp-container').appendChild(itemsArr[2]);
+// $('.sp-container').appendChild(itemsArr[3]);
+// $('.sp-container').appendChild(itemsArr[0]);
